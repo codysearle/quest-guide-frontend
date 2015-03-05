@@ -1,0 +1,53 @@
+<section>
+
+<label>Recipe Name
+    <br>
+    <input ng-model="recipe.name">
+</label>
+<br>
+<br>
+
+<label>Recipe Description
+    <br>
+    <textarea ng-model="recipe.description"></textarea>
+</label>
+<br>
+<br>
+
+<label>Recipe Directions
+    <br>
+    <textarea ng-model="recipe.directions"></textarea>
+</label>
+<br>
+<br>
+
+<label>Ingredients
+    <br>
+    <input ng-model="ingredientName">
+</label>
+<br>
+<button class="btn" ng-click="addIngredientToRecipe(ingredientName)">Add ingredient to recipe</button>
+<br>
+
+<p>Your ingredients:</p>
+<ol>
+    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
+</ol>
+
+<label>Tags
+    <br>
+    <input ng-model="tagName">
+</label>
+<br>
+<button class="btn" ng-click="addTagToRecipe(tagName)">Add tag to recipe</button>
+<br>
+
+<p>Your tags:</p>
+<ol>
+    <li ng-repeat="tag in recipe.tags">{{ tag.name }}</li>
+</ol>
+<br>
+
+<button class="btn" ng-click="addRecipe()">Save New Recipe</button>
+
+</section>
