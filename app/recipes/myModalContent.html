@@ -1,61 +1,46 @@
 <div class="modal-header">
-    <h3 class="modal-title">This feature sucks less!</h3>
+    <h3 class="modal-title">Add a new quest!</h3>
 </div>
 <div class="modal-body">
-    <label>Recipe Name
+    <div class="form-group">
         <br>
-        <input ng-model="recipe.name">
-    </label>
-    <br>
-    <br>
-
-    <label>Recipe Description
+        <input type="text" class="form-control" placeholder="Quest Name" ng-model="quest.name">
         <br>
-        <textarea ng-model="recipe.description"></textarea>
-    </label>
-    <br>
-    <br>
-
-    <label>Recipe Directions
+        <textarea type="text" class="form-control" placeholder="Quest Objective" ng-model="quest.objective"></textarea>
         <br>
-        <textarea ng-model="recipe.directions"></textarea>
-    </label>
-    <br>
-    <br>
-
-    <label>Ingredients
+        <textarea type="text" class="form-control" placeholder="Subquest" ng-model="quest.subquest"></textarea>
         <br>
-        <input ng-model="ingredientName">
-    </label>
-    <br>
-    <button class="btn btn-primary" ng-click="addIngredientToRecipe(ingredientName)"><span
-            class="glyphicon glyphicon-plus"></span> Add ingredient
-    </button>
-    <br>
-
-    <p>Your ingredients:</p>
-    <ol>
-        <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
-    </ol>
-
-    <label>Tags
+        <input type="text" class="form-control" placeholder="Location" ng-model="quest.location">
         <br>
-        <input ng-model="tagName">
-    </label>
-    <br>
-    <button class="btn btn-primary" ng-click="addTagToRecipe(tagName)"><span class="glyphicon glyphicon-tag"></span> Add
-        tag to recipe
-    </button>
-    <br>
-
-    <p>Your tags:</p>
-    <ol>
-        <li ng-repeat="tag in recipe.tags">{{ tag.name }}</li>
-    </ol>
-    <br>
-
+        <input type="text" class="form-control" placeholder="Monster" ng-model="monsterName">
+        <br>
+        <button class="btn btn-primary" ng-click="addMonsterToQuest(monsterName)"><span
+                class="glyphicon glyphicon-plus"></span> Add Monster
+        </button>
+        <br>
+        <p>Monsters</p>
+        <ol class="list-group">
+            <li class="list-group-item" ng-repeat="monster in quest.monsters">{{ monster.name }}</li>
+        </ol>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Tags</span>
+            <input type="text" class="form-control" ng-model="tagName">
+        </div>
+        <br>
+        <button class="btn btn-primary" ng-click="addTagToQuest(tagName)"><span class="glyphicon glyphicon-tag"></span>
+            Add
+            tag to quest.
+        </button>
+        <br>
+        <p>Your tags:</p>
+        <ol class="list-group">
+            <li class="list-group-item" ng-repeat="tag in quest.tags">{{ tag.name }}</li>
+        </ol>
+        <br>
+    </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="addRecipe()"> Save New Recipe</button>
+    <button class="btn btn-primary" ng-click="addQuest()"> Save New Quest</button>
     <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
 </div>

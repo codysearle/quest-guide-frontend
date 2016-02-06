@@ -30,17 +30,23 @@
 }
 
 
-.recipe-card {
-    background-color: #e88332;
-    text-align: right;
-    color: #ffffff;
-    border-radius: 1vw;
-    padding: inherit;
+.quest-card {
+    padding:inherit;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+    background-image: url("http://goo.gl/RtNcGo");
+}
+
+.quest-card p {
+    text-align: left;
+    padding-left: 5%;
 }
 
 .recipe-card img {
     max-width: 100%;
 }
+
 
 section {
 	color: #337ab7;
@@ -49,9 +55,10 @@ section {
 }
 
 .jumbotron {
-    background-size: 2000px;
-    background-image: url(https://lh5.googleusercontent.com/-NAOrA3QbCZc/VMqMBDtX0oI/AAAAAAAANVY/S1YhLnZG6bQ/w1108-h334-no/Italian%2Bfood%2Bwallpaper%2B06%2B2560x1600.jpg);
+    background-size: 1680px;
+    background-image: url(http://goo.gl/BMSLm9);
     text-color: #fff;
+    text-shadow: black 1px 1px 3px;
 }
 
 .btn {
@@ -64,5 +71,19 @@ section {
 .jumbotron h1 {
     color: #fff;
 }
+
+.jumbotron p {
+    color: #fff;
+}
+
+.background {
+    background-image: url(http://subtlepatterns.com/patterns/footer_lodyas.png);
+}
+
+.monster-info{
+    display: inline-block;
+    text-align: center;
+}
+
 
 

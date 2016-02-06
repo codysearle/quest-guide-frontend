@@ -8,6 +8,7 @@ angular.module('myApp', [
     'myApp.addRecipe',
     'myApp.version',
     'myApp.landing',
+    'myApp.monsters',
     'restangular',
     'ui.bootstrap'
 ]).

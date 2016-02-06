@@ -1,37 +1,53 @@
-
-<!--<ul>
-    <li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a>
-        <ol>
-            <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
-        </ol>
-    </li>
-</ul>
--->
-<section>
-    <button type="button" class="btn btn-primary btn" ng-click="open()">
-    <span class="glyphicon glyphicon-plus"></span> Add New Recipe
-</button>
-    <button class="btn btn-primary" ng-click="deleteRecipe()"><span class="glyphicon glyphicon-remove"></span> Delete Recipe</button>
-</section>
-
-<div ng-repeat="recipe in recipes">
+<!--<div ng-repeat="quest in quests">
     <div class="col-sm-6 col-md-4">
         <div class="recipe-card">
-            <h2>{{recipe.name}}</h2>
-            <img src="{{recipe.photo}}">
+            <h2>{{ quest.name }}</h2>
+            <hr>
+            <img src="{{ quest.photo }}">
 
-            <p>{{recipe.description}}</p>
+            <p><strong>Objective:</strong> {{ quest.objective }}<br>
+                <strong>Subquest:</strong> {{ quest.subquest }} <br>
+            <h3>Monsters</h3>
+            <div class="monster-info" ng-repeat="monster in quest.monsters">
+                <h5>{{ monster.name }}</h5>
+                <img src="{{ monster.photo }}"></div>
+            <br>
+            <strong>Location:</strong> {{ quest.location }}<br>
+
         </div>
     </div>
 
+</div>-->
+
+
+<div class="col-lg-offset-5">
+    <button type="button" class="btn btn-primary btn-lg" ng-click="open()">
+        <span class="glyphicon glyphicon-plus"></span> Add New Quest
+    </button>
 </div>
 
+<div class="col-lg-4 col-md-4 col-sm-12" ng-repeat="quest in quests">
+    <div class="panel panel-primary container-fixed">
+        <div class="panel-heading"><h1 class="panel-title text-center"><a
+                href="#/quest/{{ quest.id }}">{{ quest.name }}</a></h1></div>
+        <div class="panel-body quest-card">
+            <br><br>
+            <div class="monster-info" ng-repeat="monster in quest.monsters">
+                <img src="{{ monster.photo }}"></div>
+                <hr>
 
-<!-- Button trigger modal
-<button type="button" class="btn btn-primary btn-lg" ng-click="open()">
-    <span class="glyphicon glyphicon-plus"></span> Add New Recipe
-</button>
+            <p><strong>Main Objective:</strong> {{ quest.objective }}<br>
 
- Modal -->
+                <strong>Location:</strong> {{ quest.location }}<br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
+                <hr>
+                <strong>Subquest:</strong> {{ quest.subquest }} <br>
 
+        </div>
+    </div>
+</div>
